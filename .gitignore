@@ -119,3 +119,13 @@ node_modules/
 .*.swp
 .*.swo
 .*.tmp
+
+# Additional files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+*.gem
+*.rbc
