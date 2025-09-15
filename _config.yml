@@ -1,0 +1,17 @@
+title: "overlake.bio/docs"
+description: "Documentation"
+url: "https://docs.overlake.bio" # your site URL
+baseurl: ""
+
+theme: just-the-docs
+color_scheme: dark
+
+# Enable search (optional)
+search_enabled: true
+
+# Navigation structure (optional)
+nav_sort: case_insensitive
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
