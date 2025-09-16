@@ -4,7 +4,7 @@ url: "https://docs.overlake.bio" # your site URL
 baseurl: ""
 
 theme: just-the-docs
-color_scheme: dark
+color_scheme: nil
 
 # Enable search (optional)
 search_enabled: true
@@ -15,3 +15,6 @@ nav_sort: case_insensitive
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# Math support
+math: mathjax
