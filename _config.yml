@@ -1,10 +1,10 @@
-title: "overlake.bio/docs"
+title: "overlake.bio/documentation"
 description: "Documentation"
 url: "https://docs.overlake.bio" # your site URL
 baseurl: ""
 
 theme: just-the-docs
-color_scheme: nil
+color_scheme: water
 
 # Enable search (optional)
 search_enabled: true

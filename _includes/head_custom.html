@@ -4,3 +4,93 @@
   {% when "mathjax" %}
     {% include mathjax.html %}
 {% endcase %}
+
+<!-- Overlake logo styles and injection -->
+<style>
+.overlake-logo {
+    text-align: right;
+    line-height: 0.85;
+    margin: 2rem 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.overlake-main {
+    font-size: 2em;
+    font-weight: 200;
+    letter-spacing: -0.01em;
+    margin-bottom: 5px;
+    /* Auto-adapt to light/dark theme */
+    color: var(--body-heading-color, #24292f) !important;
+}
+
+.overlake-lake {
+    font-weight: 300;
+    color: var(--link-color, #0969da) !important;
+}
+
+.overlake-bio {
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--link-color, #0969da) !important;
+}
+
+/* Hide default site title */
+.site-title {
+    display: none !important;
+}
+
+/* Header positioning - absolute positioning for precise control */
+.site-header {
+    position: relative;
+}
+
+.site-header .overlake-logo {
+    position: absolute;
+    right: 4rem; /* Distance from right edge - adjust as needed */
+    top: 50%;
+    transform: translateY(-50%); /* Centers vertically */
+    margin: 0;
+    padding: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .overlake-main {
+        font-size: 1.5em;
+    }
+    .overlake-bio {
+        font-size: 0.9em;
+        letter-spacing: 0.05em;
+    }
+}
+
+/* Dark theme colors */
+[data-color-mode="dark"] .overlake-main {
+    color: #f0f6fc !important;
+}
+
+[data-color-mode="dark"] .overlake-lake,
+[data-color-mode="dark"] .overlake-bio {
+    color: #58a6ff !important;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const siteHeader = document.querySelector('.site-header');
+
+        if (siteHeader) {
+            const logoDiv = document.createElement('div');
+            logoDiv.className = 'overlake-logo';
+            logoDiv.innerHTML = `
+                <div class="overlake-main">over<span class="overlake-lake">lake</span></div>
+                <div class="overlake-bio">.bio</div>
+            `;
+
+            siteHeader.insertBefore(logoDiv, siteHeader.firstChild);
+        }
+    }, 100);
+});
+</script>
