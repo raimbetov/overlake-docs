@@ -47,11 +47,36 @@
 
 .site-header .overlake-logo {
     position: absolute;
-    right: 4rem; /* Distance from right edge - adjust as needed */
+    right: 2rem; /* Distance from right edge - adjust as needed */
     top: 50%;
     transform: translateY(-50%); /* Centers vertically */
     margin: 0;
     padding: 0;
+}
+
+/* Custom navigation panel styling */
+.side-bar {
+    background-color: #f1f8ff !important; /* Light blue background */
+    border-right: 1px solid #d1d9e0 !important; /* Subtle border */
+}
+
+/* Navigation item styling */
+.navigation-list-link:hover {
+    background-color: rgba(9, 105, 218, 0.1) !important; /* Blue tint on hover */
+    border-radius: 6px !important;
+}
+
+/* Active page styling */
+.navigation-list-link.active {
+    background-color: #0969da !important;
+    color: white !important;
+    border-radius: 6px !important;
+}
+
+/* Dark theme compatibility */
+[data-color-mode="dark"] .side-bar {
+    background-color: #0d1117 !important;
+    border-right: 1px solid #30363d !important;
 }
 
 /* Mobile responsive */
@@ -85,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const logoDiv = document.createElement('div');
             logoDiv.className = 'overlake-logo';
             logoDiv.innerHTML = `
-                <div class="overlake-main">over<span class="overlake-lake">lake</span></div>
+                <div class="overlake-main"><span class="overlake-lake">docs.</span>over<span class="overlake-lake">lake</span></div>
                 <div class="overlake-bio">.bio</div>
             `;
 
